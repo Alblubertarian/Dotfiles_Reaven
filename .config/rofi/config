@@ -1,0 +1,38 @@
+! "Enabled modi" Set from: Default
+rofi.modi:                           run,drun
+
+! "Window width" Set from: Default
+rofi.width:                          960
+
+! "Number of lines" Set from: Default
+rofi.lines:                          8
+
+! "Number of columns" Set from: Default
+rofi.columns:                        1
+
+! "Font to use" Set from: Default
+rofi.font:                           Terminus (TTF) 16
+
+! "Border width" Set from: Default
+rofi.bw:                             8
+
+! "Location on screen" Set from: Default
+rofi.location:                       0
+
+! "Padding" Set from: Default
+rofi.padding:                        5
+
+! "Y-offset relative to location" Set from: Default
+rofi.yoffset:                        -5
+
+! "X-offset relative to location" Set from: Default
+rofi.xoffset:                        0
+
+! "Always show number of lines" Set from: Default
+rofi.fixed-num-lines:                false
+
+! "Whether to load and show icons" Set from: Default
+rofi.show-icons:                     false
+
+! "Terminal to use" Set from: Default
+rofi.terminal:                       urxvt

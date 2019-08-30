@@ -1,0 +1,70 @@
+!! Colorscheme
+
+! special
+*.foreground:   #e2d0e0
+*.background:   #0b0b0c
+*.cursorColor:  #e2d0e0
+
+! black
+*.color0:       #0b0b0c
+*.color8:       #9e919c
+
+! red
+*.color1:       #332244
+*.color9:       #5d3e7b
+
+! green
+*.color2:       #6c6c9e
+*.color10:      #8888bb
+
+! yellow
+*.color3:       #9e8bc4
+*.color11:      #bbaadd
+
+! blue
+*.color4:       #9e8bc4
+*.color12:      #bbaadd
+
+! magenta
+*.color5:       #bb3333
+*.color13:      #ec4040
+
+! cyan
+*.color6:       #664455
+*.color14:      #85596f
+
+! white
+*.color7:       #e2d0e0
+*.color15:      #6f6f78
+
+!! URxvt settings
+
+!! General stuff
+
+URxvt*cursorColor:	#332244
+!URxvt*depth:		32
+URxvt*background:       #0b0b0c
+URxvt*cursorBLink:	true
+URxvt*cursorUnderline:	true
+URxvt*saveline:		2048
+URxvt*scrollBar:	false
+URxvt*scrollBar_right:	false
+URxvt*urgentOnBell:	true
+URxvt*iso14755:		false
+URxvt*internalBorder:	24
+
+!! Transparency settings
+
+!URxvt*transparent:	false
+!URxvt*shading:		20
+
+!! Font things
+
+!URxvt*font:		xft:Iosevka:style=Regular:size=11
+URxvt*font:		xft:Terminus (TTF):style=Medium:size=11, xft:Hack:style=REgular:size=11
+!URxvt*boldFont:	xft:Iosevka:style=Bold:size=11
+!URxvt*italicFont:	xft:Iosevka:style=Italic:size=11
+!URxvt*boldItalicFont:	xft:Iosevka:style=Bold Italic:size=11
+URxvt*letterSpace:	1
+URxvt*lineSpace:	0
+

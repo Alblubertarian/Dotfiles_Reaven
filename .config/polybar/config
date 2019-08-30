@@ -1,0 +1,235 @@
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[color]
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#222}
+
+violet = ${xrdb:color1:#222}
+light-violet = ${xrdb:color9:#222}
+ 
+red = ${xrdb:color5:#222}
+light-red = ${xrdb:color13:#222}
+ 
+slateblue = ${xrdb:color2:#222}
+light-slateblue = ${xrdb:color10:#222}
+ 
+lilac = ${xrdb:color3:#222}
+light-lilac = ${xrdb:color11:#222}
+
+eggplant = ${xrdb:color6:#222}
+light-eggplant = ${xrdb:color14:#222}
+
+white = ${xrdb:color7:#222}
+grey = ${xrdb:color8:#222}
+
+unfocus = ${xrdb:color15:#222}
+
+[bar/raven]
+override-redirect = false
+bottom = false
+fixed-center = true
+width = 100%
+height = 30
+#offset-x = 
+#offset-y = 12
+separator = 
+#wm-restack = i3
+line-size = 6
+
+font-0 = "Terminus:weight=Regular:size=11;0"
+font-1 = "Material Icons:weight:size=12;2"
+font-2 = "Symbols Nerd Font:size=12;0"
+
+background = ${color.background}
+foreground = ${color.foreground}
+
+#border-bottom-size = 6
+#border-bottom-color = ${color.unfocus}
+
+padding-left = 3
+padding-right = 3
+module-margin-left = 1
+module-margin-right = 1
+
+tray-position = right
+tray-padding = 0
+tray-maxsize = 16
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+modules-left = volume mpd
+modules-center = i3
+modules-right = brightness ethernet wifi battery date
+
+[module/volume]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+
+format-volume = <label-volume> <bar-volume>
+label-volume = " "
+label-volume-foreground = ${color.foreground}
+format-volume-underline = ${color.slateblue}
+
+format-muted-foreground = ${color.red}
+label-muted = ""
+format-muted-underline = ${color.red}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${color.light-slateblue}
+bar-volume-foreground-1 = ${color.light-slateblue}
+bar-volume-foreground-2 = ${color.light-slateblue}
+bar-volume-foreground-3 = ${color.light-slateblue}
+bar-volume-foreground-4 = ${color.light-slateblue} 
+bar-volume-foreground-5 = ${color.violet}
+bar-volume-foreground-6 = ${color.red}
+bar-volume-gradient = true
+bar-volume-indicator = 
+bar-volume-inicator-font = 1
+bar-volume-fill = 
+bar-volume-fill-font = 1
+bar-volume-empty = 
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = #0b0b0c
+bar-volume-underline = ${color.slateblue}
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-online-underline = ${color.slateblue}
+label-song = %title%
+
+format-offline = <label-offline>
+format-offline-underline = ${color.eggplant}
+label-offline = ﱙ mpd is sleeping...
+
+
+host = 127.0.0.2
+port = 45486
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+wrapping-scroll = false
+module-margin-left = 4
+module-margin-right = 4
+
+pin-workspaces = true
+fuzzy-match = true
+index-sort = true
+
+label-focused = %index%
+label-focused-underline = ${color.light-violet}
+label-focused-padding = 1
+
+#label-occupied = %index%
+#label-occupied-foreground = ${color.foreground}
+#label-occupied-padding = 1
+
+label-unfocused = %index%
+label-unfocused-foreground = ${color.grey}
+label-unfocused-padding = 1
+label-unfocused-underline = ${color.unfocus}
+
+label-urgent = %icon%
+label-urgent-background = ${color.red}
+label-urgent-padding = 1
+label-urgent-underline = ${color.red}
+
+[module/brightness]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+format-underline = ${color.lilac}
+label = 盛 %percentage%%
+
+[module/wifi]
+type = internal/network
+interface = wlp3s0
+interval = 1.0
+
+format-conneced = <label-connected> 
+format-connected-underline = ${color.lilac}
+label-connected =   %essid%
+label-connected-foreground = ${color.foreground}
+format-disconnected = 睊
+format-disconnected-foreground = ${color.red} 
+format-disconnected-underline = ${color.red}
+
+[module/ethernet]
+type = internal/network
+interface = enp0s25
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected =   Connected
+format-disconnected = 
+format-connected-underline = ${color.lilac}
+
+[module/cpu]
+type = internal/cpu
+label = %percentage%%
+interval = 2
+format-prefix = " "
+format-underline = ${color.lilac}
+
+[module/memory]
+type = internal/memory
+interval = 2
+label =  %gb_used%/%gb_free%
+format-underline = ${color.lilac}
+
+
+[module/battery]
+type = internal/battery
+full-at = 98
+time-format = %H:%M
+battery = BAT0
+adapter = AC
+
+format-charging = <animation-charging> <label-charging>
+label-charging =  %percentage%% (%time%)
+format-charging-underline = ${color.lilac}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
+format-discharging-underline = ${color.lilac}
+
+format-full = <label-full>
+format-full-prefix = " "
+format-full-underline = ${color.lilac}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-framerate = 750
+
+[module/date]
+type = internal/date
+format = <label>
+format-underline = ${color.lilac}
+interval = 1.0
+label = "%time% %date%"
+time = %H:%M
+date = "%A, %d %B"
+
+
+
+

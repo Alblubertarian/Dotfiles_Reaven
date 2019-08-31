@@ -57,12 +57,12 @@ URxvt*internalBorder:	24
 URxvt*perl-ext-common:	default,matcher
 URxvt*url-launcher: 	/usr/bin/xdg-open
 URxvt*matcher.button: 	1 
-URxvt*colorUL: 	#332244
+URxvt*colorUL: 		#9e8bc4
 
 !! Font things
 
 URxvt*font:		xft:Terminus (TTF):style=Medium:size=11
-URxvt*boldFont:	xft:Terminus (TTF):style=BOld:size=11
+URxvt*boldFont:		xft:Terminus (TTF):style=BOld:size=11
 URxvt*italicFont:	xft:Terminus (TTF):style=Italic:size=11
 URxvt*boldItalicFont:	xft:Terminus (TTF):style=Bold Italic:size=11
 URxvt*letterSpace:	1

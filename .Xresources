@@ -55,7 +55,7 @@ URxvt*internalBorder:	24
 !!URxvt plugins
 
 URxvt*perl-ext-common:	default,matcher
-URxvt*url-launcher: 	/usr/bin/xdg-open
+URxvt*url-launcher: 	/usr/bin/firefox
 URxvt*matcher.button: 	1 
 URxvt*colorUL: 		#9e8bc4
 

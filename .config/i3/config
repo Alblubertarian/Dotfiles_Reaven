@@ -134,5 +134,5 @@ gaps inner 12
 exec_always feh --bg-scale ~/Papes/Reaven.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always compton --config .config/compton/compton.conf
-exec mpd 
+exec mopidyy 
 
